@@ -1,0 +1,27 @@
+{
+  "export_path": "export/",
+
+  "models": {
+    "openai/whisper-large-v3" : "openai/whisper-large-v3",
+    "openai/whisper-large-v3-turbo" : "openai/whisper-large-v3-turbo",
+    "openai/whisper-small" : "openai/whisper-small",
+    "Apel-sin/whisper-large-v3-russian-ties-podlodka-v1.2" : "Apel-sin/whisper-large-v3-russian-ties-podlodka-v1.2",
+    "Quantumhash/Quantum_STT" : "Quantumhash/Quantum_STT",
+    "bond005/whisper-podlodka-turbo" : "bond005/whisper-podlodka-turbo"
+  },
+
+  "work_type": {
+    "New (Fresh start)" : "new",
+    "Continue (Using backup)" : "continue"
+  },
+
+  "build":{
+    "model": "",
+    "chunk_duration" : -1,
+    "work_type": "",
+    "audio_path" : "",
+    "backup_path" : "",
+    "create_backup_file" : true,
+    "clear_export_folder" : false
+  }
+}
