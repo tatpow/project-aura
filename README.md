@@ -1,13 +1,13 @@
-<p align="center">
-    
-</p>
-
 <h1 align="center">
   <img src="https://github.com/tatpow/project-aura/blob/main/banner.png" alt="Project Aura Logo" width="1000">
   <br>
   Project Aura - Audio in Analysis
   <br>
 </h1>
+
+![GitHub Release](https://img.shields.io/github/v/release/tatpow/project-aura)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/tatpow/project-aura/total)
+![GitHub License](https://img.shields.io/github/license/tatpow/project-aura)
 
 ## About this project
 This project was created to make life easier for schoolers or students.
