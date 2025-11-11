@@ -7,14 +7,15 @@ a = Analysis(
     pathex=['.'],
     binaries=[],
     datas=[
-        ('json/*.json', 'json'),
-        ('models/*.py', 'models'),
-        ('modules/**/*.py', 'modules'),
+        ('app/json/*.json', 'app/json'),   # JSON-файлы
+        ('app/**/*.py', 'app'),            # Весь код из app
+        ('icon.ico', '.'),                 # Иконка
     ],
     hiddenimports=[
         'customtkinter',
         'transformers',
         'librosa',
+        'torch',
         'tkinter',
     ],
     hookspath=[],
@@ -34,8 +35,8 @@ exe = EXE(
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
-    upx=False,
-    console=False,
+    upx=False,           # отключаем UPX — меньше шанс, что антивирус заорёт
+    console=False,       # если нужна консоль — поставь True
     icon='icon.ico'
 )
 

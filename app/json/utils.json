@@ -1,0 +1,6 @@
+{
+    "work_type": {
+        "New (Fresh start)" : "new",
+        "Continue (Using backup)" : "continue"
+    }
+}

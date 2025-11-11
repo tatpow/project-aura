@@ -1,12 +1,13 @@
 import customtkinter as ctk
-import modules.ui.functions as func
-import modules.data as data
-import modules.work as work
+
+import app.ui.functions as func
+from app.run import start
+import app.data.variables as variables
 
 ctk.set_appearance_mode("System")
 ctk.set_default_color_theme("blue")
 
-class App(ctk.CTk):
+class Window(ctk.CTk):
     def __init__(self):
         super().__init__()
         
@@ -41,10 +42,10 @@ class App(ctk.CTk):
 
         ctk.CTkLabel(inner_asr_model_option, text="Модель:").grid(row=0, column=0, padx=5, pady=5)
         ctk.CTkOptionMenu(inner_asr_model_option, variable=ctk.StringVar(value=""), 
-                          values=list(data.settings.get("models", {})), 
-                          command=lambda choice:func.select_model(data.settings["models"][choice])).grid(row=0, column=1, padx=5, pady=5)
+                          values=list(variables.MODELS.keys()), 
+                          command=lambda choice:func.select_model(variables.MODELS[choice])).grid(row=0, column=1, padx=5, pady=5)
         ctk.CTkButton(inner_asr_model_option, 
-                      text="Проверка", command=lambda:func.consolePrint(data.settings.get("build", {}).get("model"))).grid(row=0, column=2, padx=5, pady=5)
+                      text="Проверка", command=lambda:func.consolePrint(variables.build["model"])).grid(row=0, column=2, padx=5, pady=5)
         
         # Дополнительные настройки
         ctk.CTkLabel(frame_main, text="--- Параметры ---", font=ctk.CTkFont(size=12, weight="bold"), padx=5, pady=5).pack(padx=5)
@@ -86,8 +87,8 @@ class App(ctk.CTk):
         
         ctk.CTkOptionMenu(inner_main_options, 
                         variable=ctk.StringVar(value=""), 
-                        values=list(data.settings.get("work_type", {})), 
-                        command=lambda choice:func.select_work_type(data.settings["work_type"][choice], backup_file_btn)
+                        values=list(variables.UTILS["work_type"].keys()), 
+                        command=lambda choice:func.select_work_type(variables.UTILS["work_type"][choice], backup_file_btn)
                         ).grid(row=1, column=1, padx=5, pady=5)
         ctk.CTkLabel(inner_main_options, 
                      text="Файл backup.json:"
@@ -111,5 +112,5 @@ class App(ctk.CTk):
     
         ctk.CTkButton(frame_start, 
                       text="Запустить", 
-                      command=lambda: work.start()
+                      command=lambda: start()
                       ).pack(padx=5, pady=5)

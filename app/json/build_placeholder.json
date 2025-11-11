@@ -1,0 +1,9 @@
+{
+    "model": "",
+    "chunk_duration" : -1,
+    "work_type": "",
+    "audio_path" : "",
+    "backup_path" : "",
+    "create_backup_file" : true,
+    "clear_export_folder" : false
+}
