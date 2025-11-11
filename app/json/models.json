@@ -1,0 +1,8 @@
+{
+    "openai/whisper-large-v3" : "openai/whisper-large-v3",
+    "openai/whisper-large-v3-turbo" : "openai/whisper-large-v3-turbo",
+    "openai/whisper-small" : "openai/whisper-small",
+    "Apel-sin/whisper-large-v3-russian-ties-podlodka-v1.2" : "Apel-sin/whisper-large-v3-russian-ties-podlodka-v1.2",
+    "Quantumhash/Quantum_STT" : "Quantumhash/Quantum_STT",
+    "bond005/whisper-podlodka-turbo" : "bond005/whisper-podlodka-turbo"
+}
