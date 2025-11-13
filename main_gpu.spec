@@ -7,9 +7,9 @@ a = Analysis(
     pathex=['.'],
     binaries=[],
     datas=[
-        ('app/json/*.json', 'app/json'),   # JSON-файлы
-        ('app/**/*.py', 'app'),            # Весь код из app
-        ('icon.ico', '.'),                 # Иконка
+        ('app/json/*.json', 'app/json'),
+        ('app/**/*.py', 'app'),
+        ('icon.ico', '.'),
     ],
     hiddenimports=[
         'customtkinter',
@@ -31,12 +31,12 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name='Project Aura',
+    name='Project Aura (GPU)',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
-    upx=False,           # отключаем UPX — меньше шанс, что антивирус заорёт
-    console=False,       # если нужна консоль — поставь True
+    upx=False,
+    console=False,
     icon='icon.ico'
 )
 
@@ -47,5 +47,5 @@ coll = COLLECT(
     a.datas,
     strip=False,
     upx=False,
-    name='Project Aura'
+    name='Project Aura (GPU)'
 )

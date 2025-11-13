@@ -23,12 +23,13 @@ def load_json(path: str) -> dict:
         return {}
 
 def resource_path(relative_path: str) -> str:
-    """Возвращает корректный путь к ресурсам (учитывает PyInstaller). ПОЗЖЕ ДОПИШУ"""
+    """Возвращает корректный путь к ресурсам"""
     try:
-        if hasattr(sys, '_MEIPASS'):
+        if hasattr(sys, "_MEIPASS"):
             base_path = sys._MEIPASS
         else:
-            base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            base_path = os.path.dirname(os.path.abspath(sys.argv[0]))
+
         return os.path.join(base_path, relative_path)
     except Exception as e:
         print(f"Ошибка вычисления пути ресурса: {e}")

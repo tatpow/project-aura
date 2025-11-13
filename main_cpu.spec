@@ -31,12 +31,12 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name='Project Aura (Console)',
+    name='Project Aura (CPU)',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
     upx=False,           # отключаем UPX — меньше шанс, что антивирус заорёт
-    console=True,       # если нужна консоль — поставь True
+    console=False,       # если нужна консоль — поставь True
     icon='icon.ico'
 )
 
@@ -47,5 +47,5 @@ coll = COLLECT(
     a.datas,
     strip=False,
     upx=False,
-    name='Project Aura (Console)'
+    name='Project Aura (CPU)'
 )

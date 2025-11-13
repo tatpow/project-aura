@@ -40,10 +40,9 @@ def validate_before_start():
         func.consolePrint("Не выбран файл backup.json", level="ERROR")
         return 0
 
-    export_path = variables.UTILS["export_path"]
-    if not os.path.exists(export_path):
-        os.makedirs(export_path)
-        func.consolePrint(f"Создана директория экспорта: {export_path}")
+    if not os.path.exists(variables.EXPORT_PATH):
+        os.makedirs(variables.EXPORT_PATH, exist_ok=True)
+        func.consolePrint(f"Создана директория экспорта: {variables.EXPORT_PATH}")
 
     return True
 

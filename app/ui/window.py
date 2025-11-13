@@ -27,7 +27,7 @@ class Window(ctk.CTk):
 
         ctk.CTkLabel(console, text="Консоль:").pack(fill="x", expand=True, side="top", pady=5)
 
-        self.consoleTextBox = ctk.CTkTextbox(console, state="disabled", height=100)
+        self.consoleTextBox = ctk.CTkTextbox(console, state="disabled", height=200)
         self.consoleTextBox.pack(fill="x", expand=True, side="bottom")
         
         # Выбор нейросети
