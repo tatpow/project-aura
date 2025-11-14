@@ -5,16 +5,27 @@
   <br>
 </h1>
 <p align="center">
-
+![GitHub Release](https://img.shields.io/github/v/release/tatpow/project-aura)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/tatpow/project-aura/total)
+![GitHub License](https://img.shields.io/github/license/tatpow/project-aura)
 </p>
 
 ## About this project
 This project was created to make life easier for schoolers or students.
 All UI in program is in Russian. Maybe later I add English version.
 
+- [Important notes](#important-notes)
+- [CUDA](#cuda)
+- [AI Examples](#ai-examples)
+- [AI Description](#ai-ddescription)
+- [Modify of JSON files](#modify-of-json-files)
+- [License](#license)
+
 ## Important notes
 > [!WARNING]
 > All neural networks that are presented below or in the project (file settings.json) are only an EXAMPLE. By using these neural networks, you automatically agree to their license agreement, if any. If you want to read information about the neural networks that are used here, go to the AI ​​column.
+
+## CUDA (WIP)
 
 ## AI Examples
 > [!WARNING]
@@ -33,3 +44,7 @@ If you want to modify, for example, list of all models, just update JSON file. A
 > _internal\app\json (BUILD)
 
 >  app/json (SOURCE CODE)
+
+## License
+
+MIT © [tatpow](https://github.com/tatpow)
