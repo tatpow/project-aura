@@ -28,7 +28,33 @@ Convert any* audio file into a txt file, with decoding of the recording.
 > [!WARNING]
 > All neural networks that are presented below or in the project (file settings.json) are only an EXAMPLE. By using these neural networks, you automatically agree to their license agreement, if any. If you want to read information about the neural networks that are used here, go to the AI ​​column.
 
-## CUDA (WIP)
+## CUDA 
+I ran my 'banchmark'. I used model [bond005/whisper-podlodka-turbo (Apache 2.0)](https://huggingface.co/bond005/whisper-podlodka-turbo) (it's the fastest). Audio file len is 2780 seconds.
+
+I have the following components in my PC:
+- CPU: 12th Gen Intel Core i5-12500H, 2500 MHz
+- GPU (from CPU): Irix Xe Graphics
+- GPU: GeForce RTX 3050 Laptop
+- Ram: 16GB
+
+The laptop was on charge all the time. No third party programs were opened. Only one file in ogg.
+
+Also, through my setup program, you can select the type of operation: 
+- Quiet (uses the processor video card)
+- Efficiency (according to the manufacturers, this mode “balances” between video cards)
+- Turbo (everything is at maximum)
+
+Table of banchmark:
+| **Device Type** | **Time (sec)** | **Laptop Mod** |
+|---|---|---|
+| GPU | 330 | Q |
+| GPU | 170 | E |
+| GPU | 165 | T |
+| CPU | > ~2100 | Q |
+| CPU | > ~2100 | E |
+| CPU | > ~2100 | T |
+
+I don't believe this kind of performance on a CPU, it was faster on my PC rather than a laptop. Perhaps the problem is in the ogg file extension.
 
 ## AI Examples
 > [!WARNING]
