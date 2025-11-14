@@ -12,6 +12,10 @@
 ## About this project
 This project was created to make life easier for schoolers or students.
 All UI in program is in Russian. Maybe later I add English version.
+Convert any* audio file into a txt file, with decoding of the recording.
+
+*-I use [Librosa](https://librosa.org/) and [FFmpeg](https://ffmpeg.org/) ([gyan.dev build essential version: 2025-11-12-git-6cdd2cbe32](https://www.gyan.dev/ffmpeg/builds/)) for work with audio files. That mean, program maybe will be work with ANY audio type.
+
 
 - [Important notes](#important-notes)
 - [CUDA](#cuda)
