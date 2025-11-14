@@ -42,7 +42,17 @@ def select_work_type(type, button):
 
 # === Загрузка аудиофайла ===
 def load_audio_file():
-    path = filedialog.askopenfilename(filetypes=[("Audio files", "*.mp3")])
+    path = filedialog.askopenfilename(
+        filetypes=[
+            ("Audio files", "*.mp3 *.wav *.flac *.ogg *.m4a"),
+            ("MP3", "*.mp3"),
+            ("WAV", "*.wav"),
+            ("FLAC", "*.flac"),
+            ("OGG", "*.ogg"),
+            ("M4A", "*.m4a"),
+            ("All files", "*.*")
+        ]
+    )
     if not path:
         return
     if not os.path.exists(path):
@@ -55,7 +65,12 @@ def load_audio_file():
 
 # === Загрузка backup ===
 def load_backup_file():
-    path = filedialog.askopenfilename(filetypes=[("Backup JSON File", "*.json")])
+    path = filedialog.askopenfilename(
+        filetypes=[
+            ("JSON File", "*.json"),
+            ("All files", "*.*")
+        ]
+    )
     if not path:
         return
     if not os.path.exists(path):

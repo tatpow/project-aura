@@ -57,7 +57,7 @@ class Window(ctk.CTk):
         inner_main_options.pack(anchor="center")
         
         ctk.CTkLabel(inner_main_options, 
-                     text="Файл (mp3):"
+                     text="Аудио файл:"
                      ).grid(row=0, column=0, padx=5, pady=15)
         ctk.CTkButton(inner_main_options, 
                       text="Загрузить файл",
