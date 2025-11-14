@@ -4,11 +4,10 @@
   Project Aura - Audio in Analysis
   <br>
 </h1>
-<p align="center">
+
 ![GitHub Release](https://img.shields.io/github/v/release/tatpow/project-aura)
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/tatpow/project-aura/total)
 ![GitHub License](https://img.shields.io/github/license/tatpow/project-aura)
-</p>
 
 ## About this project
 This project was created to make life easier for schoolers or students.
