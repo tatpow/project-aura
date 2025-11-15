@@ -19,9 +19,9 @@ I had two audio files in MP3 format: first is 60 seconds prepared audio with low
 All tests were on Russian language.
 
 About table: 
-Test 1 - prepared audio
-Test 2 - NOT prepared audio
-Spec. info - some of my notes may be useful
+- Test 1 - prepared audio
+- Test 2 - NOT prepared audio
+- Spec. info - some of my notes may be useful
 
 I have a lot of table, here list of them:
 
@@ -38,3 +38,7 @@ I have a lot of table, here list of them:
 #### Special first iteration
 
 #### Special second iteration
+
+#### Full Table
+
+
