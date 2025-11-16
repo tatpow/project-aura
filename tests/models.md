@@ -2,10 +2,6 @@
 
 - #### Last update: 16.11.25
 
-## Prepositions (WIP)
-
-
-
 ## Data
 
 I tested nearly 80 ASR models from HF. All tests were on laptop. Here are the parameters:
@@ -14,30 +10,53 @@ I tested nearly 80 ASR models from HF. All tests were on laptop. Here are the pa
 - GPU: NVIDIA GeForce RTX 3050 Laptop / Intel Iris Xe Graphics
 - Ram: 16 GB
 
-I had two audio files in MP3 format: first is 60 seconds prepared audio with low-middle background noise, second is ~ 20 minutes not prepared audio with middle-high background noise. 
+I had tree audio files in MP3 format: first is 60 seconds prepared audio with low-middle background noise, second is ~ 3 minutes not prepared audio with middle-high background noise and third is ~ 20 minutes not prepared audio with middle-high background noise. 
 (Prepared - recorded on a speciac microphone; Not Prepared - recorded in 'real' production, for example, on real lectures).
 All tests were on Russian language.
 
 About table: 
 - Test 1 - prepared audio
-- Test 2 - NOT prepared audio
-- Spec. info - some of my notes may be useful
+- Test 2 - NOT prepared audio 3 minutes
+- Test 3 - NOT prepared audio ~ 21 minutes
+- Spec. info 'test_id' - some of my notes may be useful
 
 I have a lot of table, here list of them:
 
 - 
 
-### Tables:
+### Final table (top 5 model):
 
-#### Final table
+### Finan table for Test 1:
 
-#### First iteration
+| Model | Test 1 - Speed | Test 1 - Quality | Spec. info Test 1 |
+|---|---|---|---|
+| openai/whisper-large-v3-turbo | 15 | 95.00% |  |
+| unsloth/whisper-large-v3-turbo | 25 | 70.00% |  |
+| BorisFaj/whisperL-v3-turbo | 20 | 70.00% |  |
+| brahmairesearch/vaani-opt | 25 | 70.00% |  |
+| Quantumhash/Quantum_STT | 30 | 80.00% | partially understood |
+| Compumacy/whisper_turbo | 22 | 70.00% |  |
+| chaitnya26/whisper-large-v3-turbo-fork | 25 | 80.00% |  |
+| IdoMachlev/ido-whisper-turbo | 16 | 65.00% |  |
+| richiebailey/whisper-large-v3-turbo | 16 | 65.00% | missed parts |
+| openai/whisper-large-v2 | 185 | 65.00% | skipped parts |
+| openai/whisper-large-v3 | 30 | 100.00% |  |
+| spellingdragon/whisper-large-v3-handler | 60 | 65.00% | garbage output |
+| dvislobokov/whisper-large-v3-turbo-russian | 6 | 65.00% |  |
+| Apel-sin/whisper-large-v3-russian-ties-podlodka-v1.2 | 20 | 100.00% |  |
+| MonsterVen/whisper-small-ru | 15 | 80.00% | partially understood |
+| bond005/whisper-podlodka-turbo | 15 | 100.00% |  |
+| thucdangvan020999/whisper_v3_turbo_noise_dataset_2_7_200_step | 25 | 65.00% | partially understood |
+| antony66/whisper-large-v3-russian | 60 | 80.00% | skipped parts |
+| ElderlyDed/whisper-small-ruV4 | 4 | 70.00% | missed parts |
+| Apel-sin/whisper-large-v3-russian-ties-podlodka-v1.0 | 60 | 90.00% |  |
 
-#### Second iteration
+### Finan table for Test 2:
 
-#### Special first iteration
 
-#### Special second iteration
+
+### Finan table for Test 3:
+
 
 
 ## Full unsorted tables iterations
@@ -143,11 +162,97 @@ I have a lot of table, here list of them:
   
 <details>
   
+| Model | Test 1 - Speed | Test 1 - Quality | Spec. info Test 1 |
+|---|---|---|---|
+| openai/whisper-large-v2 | 185 | 65.00% | skipped parts |
+| spellingdragon/whisper-large-v3-handler | 60 | 65.00% | garbage output |
+| thucdangvan020999/whisper_v3_turbo_noise_dataset_2_7_200_step | 25 | 65.00% | partially understood |
+| dvislobokov/whisper-large-v3-turbo-russian | 6 | 65.00% |  |
+| IdoMachlev/ido-whisper-turbo | 16 | 65.00% |  |
+| richiebailey/whisper-large-v3-turbo | 16 | 65.00% | missed parts |
+| unsloth/whisper-large-v3-turbo | 25 | 70.00% |  |
+| Compumacy/whisper_turbo | 22 | 70.00% |  |
+| BorisFaj/whisperL-v3-turbo | 20 | 70.00% |  |
+| brahmairesearch/vaani-opt | 25 | 70.00% |  |
+| ElderlyDed/whisper-small-ruV4 | 4 | 70.00% | missed parts |
+| antony66/whisper-large-v3-russian | 60 | 80.00% | skipped parts |
+| chaitnya26/whisper-large-v3-turbo-fork | 25 | 80.00% |  |
+| MonsterVen/whisper-small-ru | 15 | 80.00% | partially understood |
+| Quantumhash/Quantum_STT | 30 | 80.00% | partially understood |
+| BobV33/Phi-4-multimodal-instruct | 15 | 80.00% |  |
+| Apel-sin/whisper-large-v3-russian-ties-podlodka-v1.0 | 60 | 90.00% |  |
+| openai/whisper-large-v3-turbo | 15 | 95.00% |  |
+| openai/whisper-large-v3 | 30 | 100.00% |  |
+| bond005/whisper-podlodka-turbo | 15 | 100.00% |  |
+| Apel-sin/whisper-large-v3-russian-ties-podlodka-v1.2 | 20 | 100.00% |  |
+| microsoft/Phi-4-multimodal-instruct | - |  | error: this is a multimodal LLM |
+| jonatasgrosman/wav2vec2-xls-r-1b-russian | - |  | error: requires torch > 2.6 |
+| FriendliAI/Phi-4-multimodal-instruct | - |  | error: this is a multimodal LLM |
+| kumapo/Phi-4-multimodal-instruct | - |  | error: this is a multimodal LLM |
+| Vikhrmodels/Borealis | - |  | error: requires specific launch setup |
+| lakshmi97/Phi-4-multimodal-instruct | - |  | error: this is a multimodal LLM |
+| waveletdeboshir/gigaam-rnnt | - |  | error: requires torchaudio |
+| waveletdeboshir/gigaam-ctc-with-lm | - |  | error: requires torchaudio |
+| waveletdeboshir/gigaam-ctc | - |  | error: requires torchaudio |
+| johntsi/ZeroSwot-Large_asr-mustc_en-to-200 | - |  | error: this is a multimodal LLM |
+| johntsi/ZeroSwot-Large_asr-mustc_mt-mustc_en-to-8 | - |  | error: this is a multimodal LLM |
+| johntsi/ZeroSwot-Medium_asr-mustc_en-to-200 | - |  | error: this is a multimodal LLM |
+| johntsi/ZeroSwot-Medium_asr-mustc_mt-mustc_en-to-8 | - |  | error: this is a multimodal LLM |
+| Den4ikAI/gigaam-ctc-whisperx | - |  | error: requires torchaudio |
+| ShadowBunting/whisper-small-ru-my-2 | - |  | error: expected str, bytes or os.PathLike object, not NoneType |
+| Lexius/Phi-4-multimodal-instruct | - |  | error: this is a multimodal LLM |
+| shadow-bunting-1/whisper-small-ru-my | - |  | error: expected str, bytes or os.PathLike object, not NoneType |
+| internalhell/whisper_small_ru_model_trainer_2 | - |  | error: expected str, bytes or os.PathLike object, not NoneType |
+| IronWolfAI/GoldenCrow | - |  | error: this is a multimodal LLM |
+| huihui-ai/Phi-4-multimodal-instruct-abliterated | - |  | error: this is a multimodal LLM |
+| mjtechguy/phi-4-multimodal-instruct | - |  | error: this is a multimodal LLM |
+| Qwzerty/whisper-large-v3-ru | - |  | error: expected str, bytes or os.PathLike object, not NoneType |
+  
+</details>
+  
+---
+
+### Full Table 3 Iteration
+  
+<details>
+  
+| Model | Test 1 - Speed | Test 1 - Quality | Spec. info Test 1 | Test 2 - Speed (3min) | Test 2 - Quality | Spec. info Test 2 |
+|---|---|---|---|---|---|---|
+| openai/whisper-large-v3 | 30 | 100.00% |  | 541 | 81.5% |  |
+| bond005/whisper-podlodka-turbo | 15 | 100.00% |  | 14 | 32.5% |  |
+| Apel-sin/whisper-large-v3-russian-ties-podlodka-v1.2 | 20 | 100.00% |  | 125 | 65.0% |  |
+| openai/whisper-large-v3-turbo | 15 | 95.00% |  | 9 | 79.0% |  |
+| Apel-sin/whisper-large-v3-russian-ties-podlodka-v1.0 | 60 | 90.00% |  | 232 | 23.0% |  |
+| antony66/whisper-large-v3-russian | 60 | 80.00% | skipped parts | 268 | 52.5% |  |
+| chaitnya26/whisper-large-v3-turbo-fork | 25 | 80.00% |  | 11 | 70.0% |  |
+| MonsterVen/whisper-small-ru | 15 | 80.00% | partially understood | 11 | 27.5% |  |
+| Quantumhash/Quantum_STT | 30 | 80.00% | partially understood | 10 | 72.5% |  |
+| BobV33/Phi-4-multimodal-instruct | - | - | - | - | - |  |
+| unsloth/whisper-large-v3-turbo | 25 | 70.00% |  | 8 | 72.5% |  |
+| Compumacy/whisper_turbo | 22 | 70.00% |  | 10 | 72.5% |  |
+| BorisFaj/whisperL-v3-turbo | 20 | 70.00% |  | 9 | 72.5% |  |
+| brahmairesearch/vaani-opt | 25 | 70.00% |  | 9 | 72.5% |  |
+| ElderlyDed/whisper-small-ruV4 | 4 | 70.00% | missed parts | 16 | 30.0% |  |
+| openai/whisper-large-v2 | 185 | 65.00% | skipped parts | 96 | 79.0% |  |
+| spellingdragon/whisper-large-v3-handler | 60 | 65.00% | garbage output | 108 | 75.0% |  |
+| thucdangvan020999/whisper_v3_turbo_noise_dataset_2_7_200_step | 25 | 65.00% | partially understood | 18 | 37.5% |  |
+| dvislobokov/whisper-large-v3-turbo-russian | 6 | 65.00% |  | 12 | 40.0% |  |
+| IdoMachlev/ido-whisper-turbo | 16 | 65.00% |  | 13 | 72.5% |  |
+| richiebailey/whisper-large-v3-turbo | 16 | 65.00% | missed parts | 13 | 72.5% |  |
+  
+</details>
+  
+---
+
+### Full Table 4 Iteration
+  
+<details>
+  
 table
   
 </details>
   
-  ---
+---
   
 </details>
 
