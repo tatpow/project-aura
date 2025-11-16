@@ -106,6 +106,12 @@ class Window(ctk.CTk):
                         command = lambda: func.change_checkbox_value("create_backup_file", check_backup.get()),
                         variable=check_backup,
                         ).grid(row=2, column=1, padx=5, pady=5)
+        check_trust_remote_code = ctk.BooleanVar(value=False)
+        ctk.CTkCheckBox(inner_main_options, 
+                        text="Доверять незвестному коду",
+                        command = lambda: func.change_checkbox_value("trust_remote_code", check_trust_remote_code.get()),
+                        variable=check_trust_remote_code,
+                        ).grid(row=2, column=2, padx=5, pady=5)
         
         frame_start = ctk.CTkFrame(frame_main, corner_radius=10)
         frame_start.pack(pady=5, padx=5, fill="x", anchor="center")

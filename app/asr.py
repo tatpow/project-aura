@@ -2,10 +2,16 @@ import copy
 import json
 import math
 import librosa
-from transformers import pipeline
 import gc
 import os
 import torch
+
+cache_path = os.path.abspath('./.cache/')
+os.environ['HF_HOME'] = cache_path
+if not os.path.exists(cache_path):
+    os.makedirs(cache_path, exist_ok=True)
+
+from transformers import pipeline
 
 import app.ui.functions as func
 import app.data.variables as variables
@@ -55,12 +61,16 @@ def get_pipeline(device, dtype):
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
 
+    if variables.build['trust_remote_code'] == True:
+        func.consolePrint("Выбранно доверие неизвестному коду")
+
     func.consolePrint(f"Загрузка модели: {model_name} (может занять некоторое время)...")
     variables.asr_pipeline = pipeline(
         "automatic-speech-recognition",
         model=model_name,
         device=device,
-        torch_dtype=dtype
+        dtype=dtype,
+        trust_remote_code=bool(variables.build['trust_remote_code'])
     )
     variables.current_model_name = model_name
     func.consolePrint("Модель успешно загружена!")
@@ -121,7 +131,6 @@ def transcribe():
         except Exception as e:
             func.consolePrint(f"Ошибка при обработке чанка {i+1}: {e}")
             text = ""
-
         progress["results"][str(i)] = text
         progress["last_processed_chunk"] = i
         
