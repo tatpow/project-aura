@@ -22,6 +22,7 @@ Convert any* audio file into a txt file, with decoding of the recording.
 - [AI Examples](#ai-examples)
 - [AI Description](#ai-description)
 - [Modify of JSON files](#modify-of-json-files)
+- [Roadmap](#roadmap)
 - [License](#license)
 
 ## Important notes
@@ -75,6 +76,16 @@ If you want to modify, for example, list of all models, just update JSON file. A
 > _internal\app\json (BUILD)
 
 >  app/json (SOURCE CODE)
+
+## Roadmap
+
+- Add multy-system to detect models.
+- Fix error 'expected str, bytes or os.PathLike object, not NoneType'.
+- Add torchaudio and etc.
+- More safer work.
+- New UI
+- New architecture
+- More functionality
 
 ## License
 
