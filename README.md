@@ -20,7 +20,7 @@ Convert any* audio file into a txt file, with decoding of the recording.
 - [Important notes](#important-notes)
 - [CUDA](#cuda)
 - [AI Examples](#ai-examples)
-- [AI Description](#ai-ddescription)
+- [AI Description](#ai-description)
 - [Modify of JSON files](#modify-of-json-files)
 - [License](#license)
 
@@ -66,7 +66,9 @@ I don't believe this kind of performance on a CPU, it was faster on my PC rather
 - [Quantumhash/Quantum_STT (Apache 2.0)](https://huggingface.co/Quantumhash/Quantum_STT)
 - [Apel-sin/whisper-large-v3-russian-ties-podlodka-v1.2 (No license?)](https://huggingface.co/Apel-sin/whisper-large-v3-russian-ties-podlodka-v1.2)
 
-## AI Description (personal opinion of the author) (WIP)
+## AI Description
+
+Aboit it you can read right [here](https://github.com/tatpow/project-aura/blob/91b026c81fc87a1210911549d4f5999d2ed75ac2/tests/models.md).
 
 ## Modify of JSON files
 If you want to modify, for example, list of all models, just update JSON file. All files you can find:
