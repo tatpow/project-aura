@@ -5,5 +5,7 @@
     "audio_path" : "",
     "backup_path" : "",
     "create_backup_file" : true,
-    "clear_export_folder" : false
+    "clear_export_folder" : false,
+    "trust_remote_code" : false,
+    "language" : "ru"
 }
