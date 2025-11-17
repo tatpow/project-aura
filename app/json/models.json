@@ -1,8 +1,6 @@
 {
-    "openai/whisper-large-v3" : "openai/whisper-large-v3",
-    "openai/whisper-large-v3-turbo" : "openai/whisper-large-v3-turbo",
-    "openai/whisper-small" : "openai/whisper-small",
-    "Apel-sin/whisper-large-v3-russian-ties-podlodka-v1.2" : "Apel-sin/whisper-large-v3-russian-ties-podlodka-v1.2",
-    "Quantumhash/Quantum_STT" : "Quantumhash/Quantum_STT",
-    "bond005/whisper-podlodka-turbo" : "bond005/whisper-podlodka-turbo"
+    "WhisperL3-T (Качество: Средне-Высокое | Скорость: Быстро)" : "openai/whisper-large-v3-turbo",
+    "WhisperL3-T-Fork (Качество: Средне-Высокое | Скорость: Средне-Быстро) (chaitnya26)" : "chaitnya26/whisper-large-v3-turbo-fork",
+    "WhisperL3 (Качество: Высокое | Скорость: Очень Медленно)" : "openai/whisper-large-v3",
+    "WhisperS-ruV4 (Качество: Плохое | Скорость: Очень Быстро) (ElderlyDed)" : "ElderlyDed/whisper-small-ruV4"
 }
