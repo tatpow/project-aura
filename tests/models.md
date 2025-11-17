@@ -20,7 +20,14 @@ About table:
 - Test 3 - NOT prepared audio ~ 21 minutes
 - Spec. info 'test_id' - some of my notes may be useful
 
-### Final table (top 5 model):
+### Final table (top models in my opinion):
+
+| Model Name | Quality | Speed | Authorship | Notes |
+|---|---|---|---|---|
+| WhisperL3-T | Medium-High | Fast | openai | Just OpenAI model. Its 'fast fork', so not always it do ASR right. |
+| WhisperL3-T-Fork | Medium-High | Medium-Fast | chaitnya26 | Medium 'player' |
+| WhisperL3 | High | Very Slow | openai | Beautiful quality, but too slow. |
+| WhisperS-ruV4 | Low | Very Fast | ElderlyDed | The fastest model in my test |
 
 ### Finan table for Test 1:
 
