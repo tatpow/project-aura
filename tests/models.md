@@ -74,7 +74,19 @@ About table:
 
 ### Finan table for Test 3:
 
-
+| Model | Test 3 - Speed | Test 3 - Quality | Persent Qualty*Speed Test 3 |
+|---|---|---|---|
+| chaitnya26/whisper-large-v3-turbo-fork | 125 | 68.3% | 54.64000% |
+| Quantumhash/Quantum_STT | 119 | 65.0% | 54.62185% |
+| Compumacy/whisper_turbo | 103 | 72.6% | 70.48544% |
+| openai/whisper-large-v3-turbo | 117 | 74.6% | 63.76068% |
+| IdoMachlev/ido-whisper-turbo | 113 | 72.6% | 64.24779% |
+| richiebailey/whisper-large-v3-turbo | 116 | 74.3% | 64.05172% |
+| BorisFaj/whisperL-v3-turbo | 106 | 74.0% | 69.81132% |
+| brahmairesearch/vaani-opt | 116 | 68.0% | 58.62069% |
+| unsloth/whisper-large-v3-turbo | 104 | 73.0% | 70.19231% |
+| openai/whisper-large-v2 | 2147 | 72.0% | 3.35352% |
+| openai/whisper-large-v3 | 1506 | 78.0% | 5.17928% |
 
 ## Full unsorted tables iterations
 <details> 
@@ -265,7 +277,19 @@ About table:
   
 <details>
   
-table
+| Model | Test 2 - Speed (2.5min) | Test 2 - Quality | Test 2 Score (7/3) | Test 2 Score (9/1) | Test 2 Score (5/5) | Test 2 Score (3/7) | Test 2 Score (1/9) | Max Score Test 2 | Score Middle Test 2 | % Score Test 2 | Test 3 - Speed | Test 3 - Quality | Persent Qualty*Speed Test 3 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| chaitnya26/whisper-large-v3-turbo-fork | 11 | 70.0% | 0.7081818182 | 0.7027272727 | 0.7136363636 | 0.7190909091 | 0.7245454545 | 0.7245454545 | 0.7136363636 | 1.51% | 125 | 68.3% | 54.64000% |
+| Quantumhash/Quantum_STT | 10 | 72.5% | 0.7475 | 0.7325 | 0.7625 | 0.7775 | 0.7925 | 0.7925 | 0.7625 | 3.79% | 119 | 65.0% | 54.62185% |
+| Compumacy/whisper_turbo | 10 | 72.5% | 0.7475 | 0.7325 | 0.7625 | 0.7775 | 0.7925 | 0.7925 | 0.7625 | 3.79% | 103 | 72.6% | 70.48544% |
+| openai/whisper-large-v3-turbo | 9 | 79.0% | 0.8196666667 | 0.7998888889 | 0.8394444444 | 0.8592222222 | 0.879 | 0.879 | 0.8394444444 | 4.50% | 117 | 74.6% | 63.76068% |
+| IdoMachlev/ido-whisper-turbo | 13 | 72.5% | 0.6921153846 | 0.7140384615 | 0.6701923077 | 0.6482692308 | 0.6263461538 | 0.7140384615 | 0.6701923077 | 6.14% | 113 | 72.6% | 64.24779% |
+| richiebailey/whisper-large-v3-turbo | 13 | 72.5% | 0.6921153846 | 0.7140384615 | 0.6701923077 | 0.6482692308 | 0.6263461538 | 0.7140384615 | 0.6701923077 | 6.14% | 116 | 74.3% | 64.05172% |
+| BorisFaj/whisperL-v3-turbo | 9 | 72.5% | 0.7741666667 | 0.7413888889 | 0.8069444444 | 0.8397222222 | 0.8725 | 0.8725 | 0.8069444444 | 7.51% | 106 | 74.0% | 69.81132% |
+| brahmairesearch/vaani-opt | 9 | 72.5% | 0.7741666667 | 0.7413888889 | 0.8069444444 | 0.8397222222 | 0.8725 | 0.8725 | 0.8069444444 | 7.51% | 116 | 68.0% | 58.62069% |
+| unsloth/whisper-large-v3-turbo | 8 | 72.5% | 0.8075 | 0.7525 | 0.8625 | 0.9175 | 0.9725 | 0.9725 | 0.8625 | 11.31% | 104 | 73.0% | 70.19231% |
+| openai/whisper-large-v2 | 96 | 79.0% | 0.578 | 0.7193333333 | 0.4366666667 | 0.2953333333 | 0.154 | 0.7193333333 | 0.4366666667 | 39.30% | 2147 | 72.0% | 3.35352% |
+| openai/whisper-large-v3 | 541 | 81.5% | 0.5749362292 | 0.7349787431 | 0.4148937153 | 0.2548512015 | 0.0948086876 | 0.7349787431 | 0.4148937153 | 43.55% | 1506 | 78.0% | 5.17928% |
   
 </details>
   
