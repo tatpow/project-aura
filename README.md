@@ -60,12 +60,11 @@ I don't believe this kind of performance on a CPU, it was faster on my PC rather
 ## AI Examples
 > [!WARNING]
 > All URL will be entered into the [Hugging Face website](https://huggingface.co/). The AI ​​work in the program is done using their [Transformers library](https://huggingface.co/docs/transformers/index).
-- [openai/whisper-large-v3 (Apache 2.0)](https://huggingface.co/openai/whisper-large-v3)
-- [openai/whisper-large-v3-turbo (MIT)](https://huggingface.co/openai/whisper-large-v3-turbo)
-- [openai/whisper-small (Apache 2.0)](https://huggingface.co/openai/whisper-small)
-- [bond005/whisper-podlodka-turbo (Apache 2.0)](https://huggingface.co/bond005/whisper-podlodka-turbo)
-- [Quantumhash/Quantum_STT (Apache 2.0)](https://huggingface.co/Quantumhash/Quantum_STT)
-- [Apel-sin/whisper-large-v3-russian-ties-podlodka-v1.2 (No license?)](https://huggingface.co/Apel-sin/whisper-large-v3-russian-ties-podlodka-v1.2)
+
+- [WhisperL3-T (openai/whisper-large-v3-turbo)](https://huggingface.co/openai/whisper-large-v3-turbo)
+- [WhisperL3-T-Fork (chaitnya26/whisper-large-v3-turbo-fork)](https://huggingface.co/chaitnya26/whisper-large-v3-turbo-fork)
+- [WhisperL3 (openai/whisper-large-v3)](https://huggingface.co/openai/whisper-large-v3)
+- [WhisperS-ruV4 (ElderlyDed/whisper-small-ruV4)](https://huggingface.co/ElderlyDed/whisper-small-ruV4)
 
 ## AI Description
 
