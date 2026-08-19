@@ -1,3 +1,8 @@
+> [!WARNING]
+> # PROJECT CLOSED. IN THE FUTURE LOOK FOR US AT [Melofixus](https://github.com/dotcoord/Melofixus)
+
+---
+
 <h1 align="center">
   <img src="https://github.com/tatpow/project-aura/blob/main/banner.png" alt="Project Aura Logo" width="1000">
   <br>
