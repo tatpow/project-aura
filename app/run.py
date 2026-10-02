@@ -33,7 +33,7 @@ def validate_before_start():
         return 0
     
     if not variables.build["audio_path"]:
-        func.consolePrint("Не выбран файл audio.mp3", level="ERROR")
+        func.consolePrint("Не выбран аудио- или видеофайл", level="ERROR")
         return 0
 
     if variables.build["work_type"] == "continue" and not variables.build["backup_path"]:

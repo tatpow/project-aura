@@ -17,24 +17,53 @@
 ## About this project
 This project was created to make life easier for schoolers or students.
 All UI in program is in Russian. Maybe later I add English version.
-Convert any* audio file into a txt file, with decoding of the recording.
+Transcribe audio and video recordings into a text file. Video files are processed by extracting their first audio track with FFmpeg.
 
-*-I use [Librosa](https://librosa.org/) and [FFmpeg](https://ffmpeg.org/) ([gyan.dev build essential version: 2025-11-12-git-6cdd2cbe32](https://www.gyan.dev/ffmpeg/builds/)) for work with audio files. That mean, program maybe will be work with ANY audio type.
+The file picker supports common audio formats (MP3, WAV, FLAC, OGG, M4A, AAC, WMA, AIFF, and OPUS) and video containers (MP4, MKV, MOV, AVI, WebM, FLV, WMV, M4V, MPEG, 3GP, TS, MTS, M2TS, OGV, VOB, and ASF). Decodable codecs depend on the media file and the bundled FFmpeg build. Windows builds include FFmpeg and ffprobe.
 
-
+- [Build](#build)
+- [Models and languages](#models-and-languages)
+- [Historical CUDA benchmark](#historical-cuda-benchmark)
 - [Important notes](#important-notes)
-- [CUDA](#cuda)
-- [AI Examples](#ai-examples)
-- [AI Description](#ai-description)
-- [Modify of JSON files](#modify-of-json-files)
-- [Roadmap](#roadmap)
+- [AI model list](#ai-model-list)
+- [Model comparisons](#model-comparisons)
+- [Modify model list](#modify-model-list)
 - [License](#license)
 
-## Important notes
-> [!WARNING]
-> All neural networks that are presented below or in the project (file settings.json) are only an EXAMPLE. By using these neural networks, you automatically agree to their license agreement, if any. If you want to read information about the neural networks that are used here, go to the AI ​​column.
+## Build
 
-## CUDA 
+Use Python 3.13 and install the matching dependencies from the repository root:
+
+```powershell
+py -3.13 -m venv .venv_gpu
+.\.venv_gpu\Scripts\Activate.ps1
+python -m pip install -r requirements\requirements_gpu.txt
+pyinstaller --noconfirm --clean --distpath dist\gpu --workpath build\gpu spec\gpu.spec
+```
+
+For the CPU build:
+
+```powershell
+py -3.13 -m venv .venv_cpu
+.\.venv_cpu\Scripts\Activate.ps1
+python -m pip install -r requirements\requirements_cpu.txt
+pyinstaller --noconfirm --clean --distpath dist\cpu --workpath build\cpu spec\cpu.spec
+```
+
+Both builds bundle the application and FFmpeg. The GPU build uses the CUDA 13.0 PyTorch wheel for recent NVIDIA GPUs, including GeForce RTX 50-series cards; the CPU build installs PyTorch without CUDA.
+
+## Models and languages
+
+The model picker includes NVIDIA [Parakeet TDT 0.6B v3](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3), a multilingual ASR model that supports Russian and 24 other languages. It runs through the Transformers 5.18 automatic-speech-recognition pipeline. Models download from Hugging Face on first use.
+
+Parakeet includes punctuation and capitalization, while recognition quality and speed depend on language, audio, hardware, and settings. Its quality has not been compared against the Whisper models on the Russian recordings documented in [the model tests](tests/models.md); try both on the same recording before choosing a default.
+
+The model repository is licensed under CC BY 4.0. Each model has its own license and terms; review them before use.
+
+## Historical CUDA benchmark
+
+The benchmark below is a historical result for Whisper from a different project setup and a GeForce RTX 3050 Laptop. It does not measure Parakeet or predict performance on newer hardware.
+
 I ran my 'banchmark'. I used model [bond005/whisper-podlodka-turbo (Apache 2.0)](https://huggingface.co/bond005/whisper-podlodka-turbo) (it's the fastest). Audio file len is 2780 seconds.
 
 I have the following components in my PC:
@@ -62,34 +91,27 @@ Table of banchmark:
 
 I don't believe this kind of performance on a CPU, it was faster on my PC rather than a laptop. Perhaps the problem is in the ogg file extension.
 
-## AI Examples
+## Important notes
+
+The listed models are examples. Check each model's license and terms before using it.
+
+## AI model list
 > [!WARNING]
-> All URL will be entered into the [Hugging Face website](https://huggingface.co/). The AI ​​work in the program is done using their [Transformers library](https://huggingface.co/docs/transformers/index).
+> The models are downloaded from [Hugging Face](https://huggingface.co/) and run locally using the [Transformers library](https://huggingface.co/docs/transformers/index).
 
 - [WhisperL3-T (openai/whisper-large-v3-turbo)](https://huggingface.co/openai/whisper-large-v3-turbo)
 - [WhisperL3-T-Fork (chaitnya26/whisper-large-v3-turbo-fork)](https://huggingface.co/chaitnya26/whisper-large-v3-turbo-fork)
 - [WhisperL3 (openai/whisper-large-v3)](https://huggingface.co/openai/whisper-large-v3)
 - [WhisperS-ruV4 (ElderlyDed/whisper-small-ruV4)](https://huggingface.co/ElderlyDed/whisper-small-ruV4)
+- [Parakeet TDT 0.6B v3 (nvidia/parakeet-tdt-0.6b-v3)](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3)
 
-## AI Description
+## Model comparisons
 
-Aboit it you can read right [here](https://github.com/tatpow/project-aura/blob/91b026c81fc87a1210911549d4f5999d2ed75ac2/tests/models.md).
+Historical Russian Whisper model comparisons and their test setup are documented in [tests/models.md](tests/models.md). Parakeet is listed there as not yet benchmarked on those recordings.
 
-## Modify of JSON files
-If you want to modify, for example, list of all models, just update JSON file. All files you can find:
-> _internal\app\json (BUILD)
+## Modify model list
 
->  app/json (SOURCE CODE)
-
-## Roadmap
-
-- Add multy-system to detect models.
-- Fix error 'expected str, bytes or os.PathLike object, not NoneType'.
-- Add torchaudio and etc.
-- More safer work.
-- New UI
-- New architecture
-- More functionality
+To add or remove a model in source, update `app/json/models.json`. Packaged builds include that file under `_internal/app/json`.
 
 ## License
 

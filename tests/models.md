@@ -1,6 +1,9 @@
-# Testing AI models of ASR format for quality, speed and other parameters (November 2025)
+# Historical Whisper model tests (November 2025)
 
 - #### Last update: 17.11.25
+
+> [!NOTE]
+> These results are historical tests of the listed Whisper and other ASR models on the setup below. Parakeet TDT 0.6B v3 was added to the application later and has **not** been tested on these recordings. Do not infer a quality or speed ranking for Parakeet from these tables; compare it with Whisper using the same audio and settings.
 
 ## Data
 
@@ -303,6 +306,5 @@ About table:
 ---
   
 </details>
-
 
 
