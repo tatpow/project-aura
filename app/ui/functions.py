@@ -40,16 +40,22 @@ def select_work_type(type, button):
         button.configure(state="disabled")
     consolePrint(f"Тип работы: {type}")
 
-# === Загрузка аудиофайла ===
+# === Загрузка аудио- или видеофайла ===
 def load_audio_file():
     path = filedialog.askopenfilename(
         filetypes=[
-            ("Audio files", "*.mp3 *.wav *.flac *.ogg *.m4a"),
-            ("MP3", "*.mp3"),
-            ("WAV", "*.wav"),
-            ("FLAC", "*.flac"),
-            ("OGG", "*.ogg"),
-            ("M4A", "*.m4a"),
+            (
+                "Media files",
+                "*.mp3 *.wav *.flac *.ogg *.m4a *.aac *.wma *.aiff *.opus "
+                "*.mp4 *.mkv *.mov *.avi *.webm *.flv *.wmv *.m4v *.mpg "
+                "*.mpeg *.3gp *.ts *.mts *.m2ts *.ogv *.vob *.asf",
+            ),
+            (
+                "Video files",
+                "*.mp4 *.mkv *.mov *.avi *.webm *.flv *.wmv *.m4v *.mpg "
+                "*.mpeg *.3gp *.ts *.mts *.m2ts *.ogv *.vob *.asf",
+            ),
+            ("Audio files", "*.mp3 *.wav *.flac *.ogg *.m4a *.aac *.wma *.aiff *.opus"),
             ("All files", "*.*")
         ]
     )

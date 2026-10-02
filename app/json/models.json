@@ -2,5 +2,6 @@
     "WhisperL3-T (Качество: Средне-Высокое | Скорость: Быстро)" : "openai/whisper-large-v3-turbo",
     "WhisperL3-T-Fork (Качество: Средне-Высокое | Скорость: Средне-Быстро) (chaitnya26)" : "chaitnya26/whisper-large-v3-turbo-fork",
     "WhisperL3 (Качество: Высокое | Скорость: Очень Медленно)" : "openai/whisper-large-v3",
-    "WhisperS-ruV4 (Качество: Плохое | Скорость: Очень Быстро) (ElderlyDed)" : "ElderlyDed/whisper-small-ruV4"
+    "WhisperS-ruV4 (Качество: Плохое | Скорость: Очень Быстро) (ElderlyDed)" : "ElderlyDed/whisper-small-ruV4",
+    "Parakeet TDT 0.6B v3 (мультиязычная, русский)" : "nvidia/parakeet-tdt-0.6b-v3"
 }

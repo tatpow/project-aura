@@ -4,6 +4,7 @@ import math
 import librosa
 import gc
 import os
+import tempfile
 import torch
 
 cache_path = os.path.abspath('./.cache/')
@@ -15,6 +16,7 @@ from transformers import pipeline
 
 import app.ui.functions as func
 import app.data.variables as variables
+from app.media import extract_audio
 
 def get_device_and_dtype() -> dict:
     """
@@ -88,10 +90,11 @@ def transcribe():
             if os.path.isfile(file_path): 
                  os.remove(file_path)
     
-    func.consolePrint("Загрузка аудиофайла...")
-    
-    # Загружаем аудио через librosa 
-    y, sr = librosa.load(variables.build["audio_path"], sr=16000, mono=True) 
+    func.consolePrint("Извлечение аудио из файла...")
+    with tempfile.TemporaryDirectory(prefix="project-aura-") as temp_dir:
+        audio_path = os.path.join(temp_dir, "audio.wav")
+        extract_audio(variables.build["audio_path"], audio_path)
+        y, sr = librosa.load(audio_path, sr=16000, mono=True)
 
     func.consolePrint("Деление аудиофайла...")
 

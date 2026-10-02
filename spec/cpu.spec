@@ -1,18 +1,21 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+import os
+
 block_cipher = None
+root_dir = os.path.abspath(os.path.join(SPECPATH, '..'))
 
 a = Analysis(
-    ['../main.py'],
-    pathex=['..'],
+    [os.path.join(root_dir, 'main.py')],
+    pathex=[root_dir],
     binaries=[
-        ('../ffmpeg/ffmpeg.exe', '.'),
-        ('../ffmpeg/ffprobe.exe', '.'), 
+        (os.path.join(root_dir, 'ffmpeg', 'ffmpeg.exe'), 'ffmpeg'),
+        (os.path.join(root_dir, 'ffmpeg', 'ffprobe.exe'), 'ffmpeg'),
     ],
     datas=[
-        ('../app/json/*.json', 'app/json'),  
-        ('../app/**/*.py', 'app'),            
-        ('../icon.ico', '.'),                 
+        (os.path.join(root_dir, 'app', 'json', '*.json'), 'app/json'),
+        (os.path.join(root_dir, 'app', '**', '*.py'), 'app'),
+        (os.path.join(root_dir, 'icon.ico'), '.'),
     ],
     hiddenimports=[
         'customtkinter',
@@ -41,7 +44,7 @@ exe = EXE(
     strip=False,
     upx=False,           
     console=False,       
-    icon='../icon.ico'
+    icon=os.path.join(root_dir, 'icon.ico')
 )
 
 coll = COLLECT(
